@@ -1,0 +1,16 @@
+[
+    {
+        "nombres": "Jane",
+        "appellidos": "Doe",
+        "edad": 35,
+        "sexo": false,
+        "estatura": 1.72
+    },
+    {
+        "nombres": "Andres",
+        "appellidos": "Alvarez",
+        "edad": 32,
+        "sexo": true,
+        "estatura": 1.80
+    }
+]
