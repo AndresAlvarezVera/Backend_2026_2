@@ -1,0 +1,12 @@
+<div>
+    <h1>Hola {{username}} desde un Motor de Plantillas</h1>
+    {{#if admin}}
+    <h2>Bienvenido Admin</h2>
+    {{#each products}}
+    <p>{{name_product}} - ${{price}}</p>
+    {{/each}}
+    {{else}}
+    <h2>Bienvenido Usuario</h2>
+    {{/if}}
+    <a href="./contact">Ir a Contacto</a>
+</div>
