@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    gap: 10px;
+}
+
+#chatContainer{
+    background-color: aliceblue;
+    border: solid 1px gray;
+    border-radius: 10px;
+
+}
