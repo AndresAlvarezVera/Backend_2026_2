@@ -1,5 +1,6 @@
 import express from 'express'
 import studentsRouter from './routes/students.router.js'
+import courseRouter from './routes/course.router.js'
 import mongoose from 'mongoose'
 
 const app = express()
@@ -9,6 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/students", studentsRouter)
+app.use("/api/courses", courseRouter)
 
 const connection = async () => {
   try {

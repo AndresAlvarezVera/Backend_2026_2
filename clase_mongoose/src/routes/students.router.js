@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
     const idStudent = req.params.id;
     const newStudent = req.body;
-    
+
     try {
         const result = await studentModel.updateOne({ _id: idStudent }, newStudent);
         if (result.matchedCount === 0) {
@@ -38,5 +38,19 @@ router.put('/:id', async (req, res) => {
         res.status(400).send({ status: 'error', error: error.message });
     }
 });
+
+router.delete("/:id", async (req, res) => {
+    const idStudent = req.params.id;
+    try {
+        const result = await studentModel.deleteOne({ _id: idStudent });
+        if (result.deletedCount === 0) {
+            return res.status(404).send({ status: 'error', error: 'Estudiante no encontrado' });
+        }
+        res.status(200).send({ status: 'success', data: result });
+    } catch (error) {
+        console.log("Error de Mongoose:", error);
+        res.status(400).send({ status: 'error', error: error.message });
+    }
+})
 
 export default router;
